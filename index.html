@@ -1,0 +1,113 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+
+  <style type="text/css" >
+      div.img  img{
+
+
+          width:100px;
+          margin:80px 60px 1px 50px;
+      }
+      .ex {
+        color:#48668c;
+        margin-left:40px;
+      }
+
+      .box{
+        width:550px;
+        height:300px;
+        background:#E4EBF3 ;
+        position:absolute;
+        top:50%;
+        left:50%;
+        margin-left:-225px;
+        margin-top:-150px;
+
+
+      }
+      .bo {background-color: #F6FAFD}
+      .color1{
+        background-color: #faffbe;
+        position:absolute;
+        top:80px;
+        left:250px;
+        width:200px;
+        height:30px;
+
+        border: none ;
+
+        -webkit-box-shadow: none ;
+        box-shadow: none;
+
+      }
+      .color2{
+        background-color:#faffbe;
+        position:absolute;
+        top:130px;
+        left:250px;
+        width:200px;
+        height:30px;
+
+        border: none ;
+        text-shadow: none;
+        -webkit-box-shadow: none ;
+        box-shadow: none;
+      }
+      .color3{
+        background-color:#3698fd;
+        position:absolute;
+        top:195px;
+        left:250px;
+        width:200px;
+        height:30px;
+        color:white;
+        border: none ;
+        text-shadow: none ;
+        -webkit-box-shadow: none ;
+        box-shadow: none;
+      }
+  </style>
+
+<body class="bo" >
+
+<div class="box">
+  <form action="">
+    <input class="color1" type="text" id="text_userid" name="userid"  placeholder="用户名">
+    <input class="color2" type="password" id="password_paw" name="psw">
+    <button class="color3" type="button" onclick="loadXhr()">
+      登录
+    </button>
+
+<div class="img">
+  <img  src="./ai.png"  >
+  <p class="ex">AI学  后台管理系统</p>
+</div>
+</div>
+</body>
+<script type="text/javascript">
+
+    function loadXhr(){
+        var user=document.getElementById("text_userid").value;
+        var pass=document.getElementById("password_paw").value;
+        var data = new FormData();
+        data.append("username", user);
+        data.append("password", pass);
+
+        var xhr = new XMLHttpRequest();
+        xhr.withCredentials = true;
+
+        xhr.addEventListener("readystatechange", function () {
+            if (this.readyState === 4) {
+                console.log(this.responseText);
+                alert(JSON.parse(this.responseText).msg)
+            }
+        });
+
+        xhr.open("post", "http://192.168.90.63:8989/api/v1/teacher/login");
+        xhr.send(data);
+
+    }
+</script>
+</html>

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1,
+    user-scalable=no, width=device-width">
+    <title>用flex制作微信页面</title>
+    <style type="text/css">
+        *{
+           padding: 0;
+            margin: 0;
+        }
+        .aaa{
+            display: flex;
+            flex-direction: column;
+            width:375px;
+        }
+        div.a0 img{
+            height:auto;
+            width:375px;
+        }
+        .a1 {
+            display: flex;
+            border: 1px solid gainsboro;
+            height: 72px;
+
+            justify-content: center;
+        }
+        .achange{
+                display: flex;
+                border: 1px solid gainsboro;
+                border-top:none;
+                height:72px;
+
+                justify-content: center;
+            }
+        .a11{
+            display: flex;
+            width: 75px;
+            height:100%;
+            align-items: center;
+            justify-content: center;
+            /*margin: auto;*/
+        }
+        .a11 img {
+            /*display: block;*/
+            /*margin: auto;*/
+            max-width: 100%;
+            /*height: auto;*/
+            /*flex:1;*/
+            width: 53px;
+            height:53px;
+        }
+        .a12{
+            flex:5;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content:center;
+            /*margin-left:6px;*/
+        }
+        .mar{
+            font-size:17px;
+            margin-top: 4px;
+        }
+        .mar1{
+            font-size:17px;
+            margin-top: 4px;
+            color:#62759a;
+        }
+        .fon{
+            color: #9b9b9b;
+            font-size:15px;
+            margin:7px 0;
+        }
+        .fon img{
+            height:20px;
+            width:19px;
+}
+        .time{
+            flex:1;
+            color: #9b9b9b;
+            font-size:12px;
+            justify-content: flex-end;
+            margin-top:15px;
+            margin-right:6px;
+        }
+        .achange1{
+            display: flex;
+            border: 1px solid gainsboro;
+            border-top:none;
+            height:66px;
+            align-items:flex-end ;
+            /*justify-content: center;*/
+        }
+        .line{
+            /*position:absolute;*/
+            border-top:1px solid darkgray;
+            border-bottom:1px solid #c4c4c4;
+            height: 56px;
+            width:400px;
+            background-color: #f9f9f9;
+            display: flex;
+            align-items: center;
+            /*flex-wrap: wrap;*/
+        }
+        .ti {
+            /*display: block;*/
+            height:29px;
+            width:33px;
+            margin: 0;
+            margin-bottom: 6px;
+        }
+        /*.wei{*/
+            /*flex:0 0 25%;*/
+            /*background-color: #ebe4e5;*/
+            /*display: flex;*/
+            /*align-items: center;*/
+            /*justify-content: center;*/
+        /*}*/
+        .wei1 {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        .marrr{
+            margin: 0px;
+            font-size:10px;
+            color:#26ab28;
+            margin-bottom: -7px;
+
+        }
+        .marrr1{
+            margin: 0px;
+            font-size:10px;
+            color: #9b9b9b;
+            margin-bottom: -7px;
+
+        }
+        .marrr2{
+            margin: 0px;
+            font-size:10px;
+            color: #9b9b9b;
+            margin-bottom: -7px;
+            margin-right:10px;
+        }
+
+        /*.wei2{*/
+            /*flex:1;*/
+            /*display: flex;*/
+            /*align-items: flex-end;*/
+            /*justify-content: center;*/
+        /*}*/
+
+    </style>
+</head>
+<body>
+<div class="aaa">
+    <div class="a0"> <img  src="./head.png"  ></div>
+    <div class="a1">
+        <div class="a11"><img  src="./QQmailbox.png" ></div>
+        <div class="a12">
+            <b class="mar">QQ邮箱提醒</b>
+            <p class="fon">新浪: 新浪 -- 找回密码</p>
+        </div>
+        <div class="time">下午3:41</div>
+    </div>
+
+
+    <div class="achange">
+        <div class="a11"><img  src="./qian.png" ></div>
+        <div class="a12">
+            <b class="mar">茜儿</b>
+            <p class="fon">对啊，而且一堆手续要办。</p>
+        </div>
+        <div class="time">下午3:38</div>
+    </div>
+
+    <div class="achange">
+        <div class="a11"><img  src="./xinxiban.png" ></div>
+        <div class="a12">
+            <b class="mar">复旦信息办</b>
+            <p class="fon">成绩信息</p>
+        </div>
+        <div class="time">下午3:32</div>
+    </div>
+
+
+    <div class="achange">
+        <div class="a11"><img  src="./jianghan.png" ></div>
+        <div class="a12">
+            <b class="mar">蒋涵</b>
+            <p class="fon">一路平安<img style="vertical-align: -4px" src="./heart.png" >[害羞]</p>
+        </div>
+        <div class="time">下午3:32</div>
+    </div>
+
+
+    <div class="achange">
+        <div class="a11"><img  src="./li.png" ></div>
+        <div class="a12">
+            <b class="mar">李靖</b>
+            <p class="fon">挺好的，可以提前实习工作啦</p>
+        </div>
+        <div class="time">下午2:23</div>
+    </div>
+
+
+    <div class="achange">
+        <div class="a11"><img  src="./wu.png" ></div>
+        <div class="a12">
+            <b class="mar">污脱帮</b>
+            <p class="fon">发亮:[动画表情]</p>
+        </div>
+        <div class="time">下午1:56</div>
+    </div>
+    <div class="achange">
+        <div class="a11"><img  src="./weixin.png" ></div>
+        <div class="a12">
+            <b class="mar1">微信团队</b>
+            <p class="fon">登录操作通知</p>
+        </div>
+        <div class="time">下午1:51</div>
+    </div>
+<div class="achange">
+    <div class="a11"><img  src="./chaoge.png" ></div>
+    <div class="a12">
+        <b class="mar">聋小熊</b>
+        <p class="fon">聋小熊领取了你的红包</p>
+    </div>
+    <div class="time">下午1:51</div>
+</div>
+    <div class="achange1">
+        <div class="line">
+            <div class="wei1"><img class="ti" src="./wei.png"><p class="marrr">微信</p></div>
+            <div class="wei1"> <img class="ti" src="./tong.png"><p class="marrr1">通讯录</p></div>
+            <div class="wei1">  <img class="ti" src="./fa1.png"><p class="marrr1">发现</p></div>
+            <div class="wei1"><img class="ti" src="./wo1.png"><p class="marrr2">我</p></div>
+        </div>
+</div>
+</div>
+</body>
+<script src="http://192.168.160.59:35729/livereload.js"></script>
+</html>
