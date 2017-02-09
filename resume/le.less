@@ -1,0 +1,29 @@
+body{
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  justify-content: center;
+}
+.buju {
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  justify-content: center;
+}
+  .circle(@color:pink) {
+    height: 48px;
+    width: 48px;
+    border-radius: 50%;
+    background-color: @color;
+  }
+  .circle1{
+    .circle;
+  }
+  .circle2{
+    .circle(yellow)
+  }
+  .circle3{
+    .circle(blue)
+  }
+
+
